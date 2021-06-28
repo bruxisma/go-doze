@@ -1,0 +1,10 @@
+version: 3
+tasks:
+  default:
+    - task: vet
+    - task: build
+    - task: test
+  build: go build ./...
+  docs: godoc -play
+  test: go test -v ./...
+  vet: go vet ./...
