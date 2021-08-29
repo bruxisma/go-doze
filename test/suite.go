@@ -34,7 +34,7 @@ func (suite *Suite) Skip() {
 	suite.T().SkipNow()
 }
 
-func (suite *Suite) FileResponsehandler(filename string) http.HandlerFunc {
+func (suite *Suite) FileResponseHandler(filename string) http.HandlerFunc {
 	return func(writer http.ResponseWriter, request *http.Request) {
 		data, error := suite.Data.ReadFile(filename)
 		suite.Require().NoError(error)
