@@ -23,7 +23,7 @@ from your shell of choice, and go modules will take care of the rest.
 
 ## Development
 
-`go-doze` uses [`task`][4] to run the most common operations. These tasks are
+`go-doze` uses [`task`][2] to run the most common operations. These tasks are
 then duplicated with extra flags within the GitHub Actions workflow.
 
 Task has [instructions on installation](https://taskfile.dev/#/installation).
@@ -36,7 +36,7 @@ In addition to [resty][1], `go-doze`
 [1]: https://github.com/go-rest/resty
 [2]: https://github.com/go-task/task
 
-[codecov-svg]: #
+[codecov-svg]: https://codecov.io/gh/slurps-mad-rips/go-doze/branch/main/graph/badge.svg
 [build-svg]: https://github.com/slurps-mad-rips/go-doze/actions/workflows/build.yml/badge.svg
 [badge-svg]: https://pkg.go.dev/badge/occult.work/doze.svg
 
