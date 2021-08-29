@@ -7,6 +7,7 @@ import (
 	"io"
 	"net/http"
 	"net/http/httptest"
+	"testing"
 
 	"github.com/stretchr/testify/suite"
 )
@@ -15,6 +16,11 @@ type Suite struct {
 	suite.Suite
 	Server *httptest.Server
 	Data   *embed.FS
+}
+
+// Execute the given TestingSuite
+func Run(t *testing.T, s suite.TestingSuite) {
+	suite.Run(t, s)
 }
 
 func (suite *Suite) TearDownSuite() {
