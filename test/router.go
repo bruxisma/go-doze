@@ -24,7 +24,7 @@ func routerHandler(handler http.HandlerFunc) http.HandlerFunc {
 }
 
 func (router *Router) Method(method, path string, handler http.HandlerFunc) *Router {
-	router().inner().Methods(method).Path(path).HandlerFunc(routerHandler(handler))
+	router.inner().Methods(method).Path(path).HandlerFunc(routerHandler(handler))
 	return router
 }
 
