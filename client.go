@@ -28,22 +28,32 @@ func (client *Client) ToResty() *resty.Client {
 	return (*resty.Client)(client)
 }
 
-func (client *Client) SetAuthToken(token string) {
+func (client *Client) SetAuthToken(token string) *Client {
 	client.ToResty().SetAuthToken(token)
+	return client
 }
 
-func (client *Client) SetAuthScheme(scheme string) {
+func (client *Client) SetAuthScheme(scheme string) *Client {
 	client.ToResty().SetAuthScheme(scheme)
+	return client
 }
 
-func (client *Client) SetUserAgent(agent string) {
-	client.ToResty().SetHeader("User-Agent", agent)
-}
-
-func (client *Client) SetBaseURL(url string) {
+func (client *Client) SetBaseURL(url string) *Client {
 	client.ToResty().SetHostURL(url)
+	return client
 }
 
-func (client *Client) SetDebug() {
+func (client *Client) SetDebug() *Client {
 	client.ToResty().SetDebug(true)
+	return client
+}
+
+func (client *Client) SetError(error interface{}) *Client {
+	client.ToResty().SetError(error)
+	return client
+}
+
+func (client *Client) SetUserAgent(agent string) *Client {
+	client.ToResty().SetHeader("User-Agent", agent)
+	return client
 }
