@@ -38,11 +38,6 @@ func (client *Client) SetAuthScheme(scheme string) *Client {
 	return client
 }
 
-func (client *Client) SetUserAgent(agent string) *Client {
-	client.ToResty().SetHeader("User-Agent", agent)
-	return client
-}
-
 func (client *Client) SetBaseURL(url string) *Client {
 	client.ToResty().SetHostURL(url)
 	return client
@@ -50,5 +45,15 @@ func (client *Client) SetBaseURL(url string) *Client {
 
 func (client *Client) SetDebug() *Client {
 	client.ToResty().SetDebug(true)
+	return client
+}
+
+func (client *Client) SetError(error interface{}) *Client {
+	client.ToResty().SetError(error)
+	return client
+}
+
+func (client *Client) SetUserAgent(agent string) *Client {
+	client.ToResty().SetHeader("User-Agent", agent)
 	return client
 }
