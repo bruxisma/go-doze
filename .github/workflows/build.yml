@@ -63,5 +63,4 @@ jobs:
         with:
           fail_ci_if_error: true
           directory: ${{ github.workspace }}
-          dry_run: true
           files: coverage.out
