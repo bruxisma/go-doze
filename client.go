@@ -24,6 +24,9 @@ func NewClient() *Client {
 	return (*Client)(client)
 }
 
+// Casts the client to its original underlying type. This will eventually be
+// removed once the general surface area that is actually needed for doze is
+// known.
 func (client *Client) ToResty() *resty.Client {
 	return (*resty.Client)(client)
 }
