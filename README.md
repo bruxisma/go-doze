@@ -29,10 +29,6 @@ then duplicated with extra flags within the GitHub Actions workflow.
 Task has [instructions on installation](https://taskfile.dev/#/installation).
 Once installed, simply run `task` from the project directory.
 
-## Dependencies
-
-In addition to [resty][1], `go-doze`
-
 [1]: https://github.com/go-rest/resty
 [2]: https://github.com/go-task/task
 
