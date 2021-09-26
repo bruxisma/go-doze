@@ -32,10 +32,10 @@ Once installed, simply run `task` from the project directory.
 [1]: https://github.com/go-rest/resty
 [2]: https://github.com/go-task/task
 
-[codecov-svg]: https://codecov.io/gh/slurps-mad-rips/go-doze/branch/main/graph/badge.svg
-[build-svg]: https://github.com/slurps-mad-rips/go-doze/actions/workflows/build.yml/badge.svg
+[codecov-svg]: https://codecov.io/gh/bruxisma/go-doze/branch/main/graph/badge.svg
+[build-svg]: https://github.com/bruxisma/go-doze/actions/workflows/build.yml/badge.svg
 [badge-svg]: https://pkg.go.dev/badge/occult.work/doze.svg
 
-[codecov-link]: https://codecov.io/gh/slurps-mad-rips/go-doze
-[build-link]: https://github.com/slurps-mad-rips/go-doze/actions/workflows/build.yml
+[codecov-link]: https://codecov.io/gh/bruxisma/go-doze
+[build-link]: https://github.com/bruxisma/go-doze/actions/workflows/build.yml
 [badge-link]: https://pkg.go.dev/occult.work/doze
