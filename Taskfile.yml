@@ -1,10 +1,16 @@
+---
 version: 3
+includes:
+  bootstrap: ./tasks/bootstrap.yml
+  go: ./tasks/go.yml
 tasks:
   default:
-    - task: vet
-    - task: build
     - task: test
+  bootstrap:
+    desc: Install tools necessary for development
+    deps: [bootstrap:golangci-lint, bootstrap:gofumpt, bootstrap:gotestfmt]
   build: go build ./...
   docs: godoc -play
-  test: go test -v ./...
-  vet: go vet ./...
+  test: go test -json -v . 2>&1 | gotestfmt
+  lint: golangci-lint run
+  format: gofumpt -l -w

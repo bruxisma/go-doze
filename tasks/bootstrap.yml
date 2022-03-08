@@ -1,0 +1,12 @@
+---
+version: '3'
+tasks:
+  golangci-lint:
+    - task: :go:install
+      vars: { tool: github.com/golangci/golangci-lint/cmd/golangci-lint }
+  gofumpt:
+    - task: :go:install
+      vars: { tool: mvdan.cc/gofumpt }
+  gotestfmt:
+    - task: :go:install
+      vars: { tool: github.com/haveyoudebuggedit/gotestfmt/v2/cmd/gotestfmt }
