@@ -38,13 +38,13 @@ jobs:
         run: echo "::set-output name=dir::$(go env GOCACHE)"
         id: go-build-cache
       - name: Setup Go Modules Cache
-        uses: actions/cache@937d24475381cd9c75ae6db12cb4e79714b926ed # tag=v2
+        uses: actions/cache@4b0cf6cc4619e737324ddfcec08fff2413359514 # tag=v3
         with:
           restore-keys: ${{ runner.os }}-go-modules-
           path: ${{ steps.go-modules-cache.outputs.dir }}
           key: ${{ runner.os }}-go-modules-${{ hashFiles('**/go.sum') }}
       - name: Setup Go Build Cache
-        uses: actions/cache@937d24475381cd9c75ae6db12cb4e79714b926ed # tag=v2
+        uses: actions/cache@4b0cf6cc4619e737324ddfcec08fff2413359514 # tag=v3
         with:
           restore-keys: ${{ runner.os }}-go-build-
           path: ${{ steps.go-build-cache.outputs.dir }}
