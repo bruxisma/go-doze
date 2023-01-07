@@ -1,3 +1,9 @@
+# Archived
+
+| Date | Reason |
+| --- | --- |
+| 2023-01-06 | No longer using golang as primary language |
+
 # Overview
 
 [![Go Reference][badge-svg]][badge-link]
